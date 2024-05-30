@@ -57,10 +57,13 @@ def read_output(stdout, stderr, terminate_event):
         error = stderr.read()
         print(f"Output: {output.decode()}")
         print(f"Error: {error.decode()}")
+        # Create the logs directory if it does not exist
+        log_directory = os.path.join(current_directory, 'logs')
+        os.makedirs(log_directory, exist_ok=True)
         # Create a log file with the current date and time
         now = datetime.datetime.now()
         log_filename = f"{gateway}-{now.strftime('%d:%m:%y_%H:%M')}.txt"
-        with open(os.path.join(current_directory, 'logs', log_filename), "w") as f:
+        with open(os.path.join(log_directory, log_filename), "w") as f:
             f.write(output.decode())
             f.write(error.decode())
 
