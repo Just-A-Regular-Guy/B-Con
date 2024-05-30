@@ -21,8 +21,8 @@ This repository contains a Python-based GUI application for establishing a VPN c
 
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/your-username/vpn-connection-gui.git
-   cd vpn-connection-gui
+   git clone https://github.com/Just-A-Regular-Guy/B-Con
+   cd B-Con
    ```
 
 2. **Install the required Python libraries**:
